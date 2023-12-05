@@ -25,10 +25,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    viewBinding{
+        enable = true
+    }
+
 }
 
 dependencies {
-//    implementation project(':beautifulspinner')
+    implementation project(':beautifulspinner')
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

@@ -6,5 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".SpinnerActivity">
-    
+
+    <com.example.beautifulspinner.BeautifulSpinner
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
 </LinearLayout>
