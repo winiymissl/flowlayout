@@ -1,37 +1,18 @@
-if (isRunAlone.toBoolean()) {
-    apply plugin: 'com.android.application'
-} else {
-    apply plugin: 'com.android.library'
-}
+apply plugin: 'com.android.application'
 
 android {
     namespace 'com.example.beautifulspinner'
     compileSdk 33
 
     defaultConfig {
-        if (isRunAlone.toBoolean()) {
-            applicationId "com.example.beautifulspinner"
-        }
+        applicationId "BeautifulSpinner"
         minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        sourceSets {
-            main {
-                // 单独调试与集成调试时使用不同的 AndroidManifest.xml 文件
-                if (isRunAlone.toBoolean()) {
-                    manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
-                    java {
-                        //当此Module作为单独的Application运行时，加载 "src/component"路径下的文件
-                        srcDirs 'src/main'
-                    }
-                } else {
-                    manifest.srcFile 'src/main/AndroidManifest.xml'
-                }
-            }
-        }
+
     }
 
     buildTypes {
@@ -41,13 +22,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-
+//    implementation project(':beautifulspinner')
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
