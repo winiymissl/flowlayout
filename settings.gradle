@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "BeautifulSpinner"
 include ':app'
 include ':beautifulspinner'
+include ':flowlayout'

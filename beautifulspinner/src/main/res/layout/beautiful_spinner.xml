@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:orientation="vertical"
     android:showDividers="middle">
 
@@ -22,7 +21,7 @@
         <ImageView
             android:id="@+id/iv_indicator"
             android:layout_width="20dp"
-            android:layout_height="21dp"
+            android:layout_height="23dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
@@ -37,9 +36,9 @@
 
         <ListView
             android:id="@+id/lv_content"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp" />
+            android:layout_width="match_parent"
+            android:background="@android:color/holo_blue_bright"
+            app:layout_constraintTop_toTopOf="@id/ll_Title" />
     </androidx.constraintlayout.motion.widget.MotionLayout>
 </LinearLayout>

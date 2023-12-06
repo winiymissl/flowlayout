@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:defaultDuration="500">
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
@@ -11,15 +12,14 @@
     <ConstraintSet android:id="@+id/end">
         <Constraint
             android:id="@id/lv_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="200dp" />
     </ConstraintSet>
 
     <Transition
         app:constraintSetEnd="@id/end"
-        app:constraintSetStart="@+id/start"
-        app:duration="500">
+        app:constraintSetStart="@+id/start">
         <OnClick
             app:clickAction="toggle"
-            app:targetId="@id/lv_content" />
+            app:targetId="@id/iv_indicator" />
     </Transition>
 </MotionScene>

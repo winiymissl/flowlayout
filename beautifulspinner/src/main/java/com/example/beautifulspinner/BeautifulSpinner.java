@@ -25,6 +25,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatSpinner;
 
+import com.example.beautifulspinner.SpinnerUtils.SpinnerUtils;
+
 /**
  * @Author winiymissl
  * @Date 2023-12-05 13:58
@@ -126,7 +128,36 @@ public class BeautifulSpinner extends FrameLayout {
         isClosed = !isClosed;
 
         //出现ListView
-        final int answerHeight = tv_title.getMeasuredHeight();
-        final int listview = lv_content.getMeasuredHeight();
+//        final int answerHeight = tv_title.getMeasuredHeight();
+//        final int listview = lv_content.getMeasuredHeight();
+//        ValueAnimator valueAnimator = isClosed ? ObjectAnimator.ofFloat(lv_content, "y", answerHeight, SpinnerUtils.dip2px(getContext(), 400)) : ObjectAnimator.ofFloat(lv_content, "y", SpinnerUtils.dip2px(getContext(), 400), answerHeight);
+//        valueAnimator.start();
+//        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(@NonNull ValueAnimator animation) {
+//
+//            }
+//        });
+//        valueAnimator.addListener(new Animator.AnimatorListener() {
+//            @Override
+//            public void onAnimationStart(@NonNull Animator animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(@NonNull Animator animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationCancel(@NonNull Animator animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(@NonNull Animator animation) {
+//
+//            }
+//        });
     }
 }
